@@ -1,19 +1,19 @@
+{% load static %}
 <header>
     <div class="container">
         <nav class="navbar">
             <a href="{% url 'home' %}" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-mountain"></i>
-                    <i class="fas fa-snowboarding"></i>
-                </div>
-                <span>ДИКИЕ ДОСКИ</span>
+                <img src="{% static 'images/Снимок экрана (22).png' %}" alt="Дикие Доски" class="logo-image">
             </a>
             <div class="nav-links">
                 <a href="{% url 'home' %}" class="nav-link">Главная</a>
                 <a href="{% url 'menu' %}" class="nav-link">Меню</a>
-                <a href="#contacts" class="nav-link">Контакты</a>
+                {% if request.resolver_match.url_name == 'home' %}
+                    <a href="#contacts" class="nav-link">Контакты</a>
+                {% else %}
+                    <a href="{% url 'home' %}#contacts" class="nav-link">Контакты</a>
+                {% endif %}
             </div>
         </nav>
     </div>
 </header>
-

@@ -9,130 +9,309 @@
         <div class="container">
             <h1 class="main-title">ОСНОВНОЕ МЕНЮ</h1>
             <p class="menu-description">
-                Наслаждайтесь лучшими блюдами и напитками после активного дня на склоне. 
+                Наслаждайтесь лучшими блюдами после активного дня на склоне. 
                 Все блюда готовятся из свежих ингредиентов с видом на горы.
             </p>
         </div>
     </section>
 
-    <!-- Раздел КОКТЕЙЛИ -->
+    <!-- Раздел СУПЫ с фотографией -->
     <section class="menu-section">
         <div class="container">
-            <h2 class="menu-category-title">КОКТЕЙЛИ</h2>
+            <h2 class="menu-category-title">СУПЫ</h2>
             
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">КОКО СПАЙС</h3>
-                        <p class="item-description">Какао мусс, апельсиновый сок, маракуйя</p>
-                    </div>
-                    <div class="item-price">320 ₽</div>
-                </div>
+            <div class="category-container">
+                <div class="category-content">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">СОЛЯНКА</h3>
+                                <p class="item-description">4 вида мяса, сметана, лимон, зелень</p>
+                            </div>
+                            <div class="item-price">700 ₽<div class="item-weight">300</div></div>
+                        </div>
 
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">ТЕКИЛА САНРАЙЗ</h3>
-                        <p class="item-description">Текила санрайз, имбирный эль, ананас</p>
-                    </div>
-                    <div class="item-price">250 ₽</div>
-                </div>
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">СУП-КРЕМ КАРТОФЕЛЬНЫЙ</h3>
+                                <p class="item-description">с беконом<br>картофель, лук репчатый, сливки, бекон, лук фри, зеленое масло</p>
+                            </div>
+                            <div class="item-price">300 ₽<div class="item-weight">650</div></div>
+                        </div>
 
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">КЛУБНИЧНЫЙ ПИНЬЯ КОЛАДА</h3>
-                        <p class="item-description">Клубника, кокосовый крем, ананасовый сок</p>
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">КУРИНЫЙ СУП</h3>
+                                <p class="item-description">вермешель, лук репчатый, морковь, зелень, сухарики</p>
+                            </div>
+                            <div class="item-price">300 ₽<div class="item-weight">600</div></div>
+                        </div>
                     </div>
-                    <div class="item-price">380 ₽</div>
                 </div>
-
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">КУБА ЛИБРЕ</h3>
-                        <p class="item-description">Тёмный ром, свежий лайм, кола</p>
-                    </div>
-                    <div class="item-price">350 ₽</div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">ПИММС ФРУТОВЫЙ</h3>
-                       p class="item-description">Ананас, банан, клубника, имбирный эль, огурец</p>
-                    </div>
-                    <div class="item-price">360 ₽</div>
+                
+                <div class="category-image">
+                    <img src="{% static 'images/76ec5143b2394b5e8036fa608309dd7e.jpg' %}" alt="Солянка" class="category-photo">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Раздел ВИНО -->
+    <!-- Раздел БУРГЕРЫ с НОВОЙ фотографией -->
     <section class="menu-section">
         <div class="container">
-            <h2 class="menu-category-title">ВИНО</h2>
+            <h2 class="menu-category-title">БУРГЕРЫ</h2>
             
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">ШАРДОНЕ HAND OF TIME</h3>
-                        <p class="item-description">Шардоне, Винья дель Мар</p>
-                    </div>
-                    <div class="item-price">1990 ₽</div>
+            <div class="category-container">
+                <!-- НОВАЯ ФОТО БУРГЕРА слева -->
+                <div class="category-image">
+                    <img src="{% static 'images/i.jpg' %}" alt="Бургер" class="category-photo burger-photo">
                 </div>
+                
+                <!-- Текст бургеров справа -->
+                <div class="category-content">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">С РВАНЫМ МЯСОМ СВИНЫХ РЕБЕР</h3>
+                                <p class="item-description">свежие овощи, ребра свиные, барбекю, чеддер, сливочное масло</p>
+                            </div>
+                            <div class="item-price">890 ₽<div class="item-weight">250</div></div>
+                        </div>
 
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">МОСКАТО CAVIT</h3>
-                        <p class="item-description">Ода сладости и фруктовости</p>
-                    </div>
-                    <div class="item-price">2250 ₽</div>
-                </div>
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">С МРАМОРНОЙ ГОВЯДИНОЙ</h3>
+                                <p class="item-description">мраморная говядина, чеддер, огурец корнишон, помидор, соус фирменный</p>
+                            </div>
+                            <div class="item-price">990 ₽<div class="item-weight">250</div></div>
+                        </div>
 
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">РИСЛИНГ MICHELLE</h3>
-                        <p class="item-description">Санта Лусия Хайлендс</p>
-                    </div>
-                    <div class="item-price">3320 ₽</div>
-                </div>
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">С КУРИНЫМ СТЕЙКОМ</h3>
+                                <p class="item-description">куриное филе в панировке, соус барбекю, йогуртовый соус, свежие овощи, чеддер</p>
+                            </div>
+                            <div class="item-price">790 ₽<div class="item-weight">250</div></div>
+                        </div>
 
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">МАЛЬБЕК DONNA PAULA</h3>
-                        <p class="item-description">Франция, насыщенный и бархатистый</p>
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">ДЕТСКИЙ БУРГЕР</h3>
+                                <p class="item-description">булочка 60мм, котлета говяжья, кетчуп, сыр чеддер</p>
+                            </div>
+                            <div class="item-price">750 ₽<div class="item-weight">200</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">СЫРНЫЙ</h3>
+                                <p class="item-description">котлета из мраморной говядины, вишневый соус, пряный сыр, чеддер, свежие овощи</p>
+                            </div>
+                            <div class="item-price">990 ₽<div class="item-weight">250</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">ФИРМЕННЫЙ БУРГЕР</h3>
+                                <p class="item-description">котлета из мраморной говядины, овощи, бекон, соус из копченого сулугуни и кинзы</p>
+                            </div>
+                            <div class="item-price">1190 ₽<div class="item-weight">200</div></div>
+                        </div>
                     </div>
-                    <div class="item-price">1240 ₽</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Раздел ЗАКУСКИ -->
+    <!-- Раздел САЛАТЫ с фотографией -->
     <section class="menu-section">
         <div class="container">
-            <h2 class="menu-category-title">ЗАКУСКИ</h2>
+            <h2 class="menu-category-title">САЛАТЫ</h2>
+            
+            <div class="category-container">
+                <!-- Текст салатов слева -->
+                <div class="category-content">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">КОУЛ СЛОУ</h3>
+                                <p class="item-description">капуста краснокочанная, белокочанная, зернистая горчица, яблочный уксус, майонез, перец болгарский, морковь</p>
+                            </div>
+                            <div class="item-price">290 ₽<div class="item-weight">150</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">ОВОЩНОЙ САЛАТ С СУЛУГУНИ</h3>
+                                <p class="item-description">свежие овощи, сыр сулугуни, оливковое масло, лимонный сок</p>
+                            </div>
+                            <div class="item-price">490 ₽<div class="item-weight">200</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">САЛАТ С КУРИЦЕЙ И КУСКУСОМ</h3>
+                                <p class="item-description">куриная грудка, кускус, свежие овощи, йогуртовый соус</p>
+                            </div>
+                            <div class="item-price">590 ₽<div class="item-weight">200</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Фото салата справа -->
+                <div class="category-image">
+                    <img src="{% static 'images/salat.avif' %}" alt="Салаты" class="category-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел МЯСО с фотографией -->
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="menu-category-title">МЯСО</h2>
+            
+            <div class="category-container">
+                <!-- Фото мяса слева -->
+                <div class="category-image">
+                    <img src="{% static 'images/i (1).webp' %}" alt="Мясо" class="category-photo">
+                </div>
+                
+                <!-- Текст мяса справа -->
+                <div class="category-content">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">С ГЛАЗУРЬЮ BBQ</h3>
+                                <p class="item-description">мясо в соусе BBQ, свежие овощи, домашний хлеб</p>
+                            </div>
+                            <div class="item-price">890 ₽<div class="item-weight">200</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">КАРРИВУРСТ</h3>
+                                <p class="item-description">куриные колбаски, соус карривурст, зелень, лук фри</p>
+                            </div>
+                            <div class="item-price">760 ₽<div class="item-weight">200</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">ЛЮЛЯШЕЧКИ ГОВЯЖЬИ</h3>
+                                <p class="item-description">свежие овощи, говяжьи люля, лаваш</p>
+                            </div>
+                            <div class="item-price">990 ₽<div class="item-weight">200</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">КУРИНАЯ ОТБИВНАЯ</h3>
+                                <p class="item-description">бедро куриное в панировке, соус барбекю</p>
+                            </div>
+                            <div class="item-price">650 ₽<div class="item-weight">200</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">БИФШТЕКС С ЯЙЦОМ</h3>
+                                <p class="item-description">говяжий бифштекс, яйцо куриное, перечный соус</p>
+                            </div>
+                            <div class="item-price">890 ₽<div class="item-weight">200</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел ГОРЯЧИЕ ЗАКУСКИ с фотографией -->
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="menu-category-title">ГОРЯЧИЕ ЗАКУСКИ</h2>
+            
+            <div class="category-container">
+                <!-- Текст горячих закусок слева -->
+                <div class="category-content">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">КАРТОФЕЛЬ ФРИ</h3>
+                                <p class="item-description">с кетчупом</p>
+                            </div>
+                            <div class="item-price">390 ₽<div class="item-weight">150/40</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">БАТАТ ФРИ</h3>
+                                <p class="item-description">с кетчупом</p>
+                            </div>
+                            <div class="item-price">450 ₽<div class="item-weight">150/40</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">ГРЕНКИ</h3>
+                                <p class="item-description">песто из кинзы, аджичная специя</p>
+                            </div>
+                            <div class="item-price">450 ₽<div class="item-weight">150/40</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">СЫРНЫЕ ПАЛОЧКИ</h3>
+                                <p class="item-description">соус тар-тар</p>
+                            </div>
+                            <div class="item-price">650 ₽<div class="item-weight">140/40</div></div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="item-content">
+                                <h3 class="item-name">КУРИНЫЕ ПАЛОЧКИ</h3>
+                                <p class="item-description">соус барбекю</p>
+                            </div>
+                            <div class="item-price">650 ₽<div class="item-weight">140/40</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Фото горячих закусок справа -->
+                <div class="category-image">
+                    <img src="{% static 'images/i (2).webp' %}" alt="Горячие закуски" class="category-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел КОМБО (без фото) -->
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="menu-category-title">КОМБО</h2>
             
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-content">
-                        <h3 class="item-name">ЧЕСНОЧНЫЙ ХЛЕБ С СЫРОМ</h3>
-                        <p class="item-description">Французский багет с розмарином и четырьмя видами сыра</p>
+                        <h3 class="item-name">КОМБО 1</h3>
+                        <p class="item-description">с куриной отбивной, картофель фри, напиток 0,3</p>
                     </div>
-                    <div class="item-price">320 ₽</div>
+                    <div class="item-price">1200 ₽<div class="item-weight">400</div></div>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-content">
-                        <h3 class="item-name">КРЕВЕТКИ СКАНПИ</h3>
-                        <p class="item-description">Королевские креветки в белом вине, масле и чесноке</p>
+                        <h3 class="item-name">КОМБО 2</h3>
+                        <p class="item-description">с мраморной говядиной, коул слоу, напиток 0,3</p>
                     </div>
-                    <div class="item-price">450 ₽</div>
+                    <div class="item-price">1200 ₽<div class="item-weight">400</div></div>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-content">
-                        <h3 class="item-name">ЖАРЕНЫЕ КАЛЬМАРЫ</h3>
-                        <p class="item-description">Панированные кальмары, обжаренные в масле канолы</p>
+                        <h3 class="item-name">КОМБО ДЕТСКИЙ</h3>
+                        <p class="item-description">мини бургер с говядиной, картофель фри, напиток 0,3</p>
                     </div>
-                    <div class="item-price">380 ₽</div>
+                    <div class="item-price">1200 ₽<div class="item-weight">400</div></div>
                 </div>
             </div>
         </div>

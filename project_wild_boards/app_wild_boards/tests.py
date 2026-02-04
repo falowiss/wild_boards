@@ -6,4 +6,4 @@ class ViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'app_wild_boards/home.html')
 
-        
+        св

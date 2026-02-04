@@ -1,13 +1,6 @@
-/* ============================================
-   ТОЧНЫЙ СТИЛЬ КАК НА КАРТИНКЕ МЕНЮ
-   С русским меню и красивыми ценами
-   ============================================ */
-
-/* Импортируем шрифт похожий на тот что на картинке */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
 
 :root {
-    /* Цвета как на картинке */
     --bg-dark: #0a0a0a;
     --bg-header: #000000;
     --text-white: #ffffff;
@@ -19,14 +12,11 @@
     --accent-red: #8b0000;
     --border-color: #333333;
     --price-gold: #e6d08c;
-    
-    /* Тематические цвета апрески */
     --snow-blue: #2c5aa0;
     --mountain-dark: #1a3a5f;
     --ski-orange: #e67e22;
 }
 
-/* ============ БАЗОВЫЕ СТИЛИ ============ */
 * {
     margin: 0;
     padding: 0;
@@ -40,15 +30,15 @@ body {
     line-height: 1.6;
     font-weight: 300;
     letter-spacing: 0.3px;
+    min-width: 1200px; /* Минимальная ширина для десктопа */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
-/* ============ ШАПКА С ТЕМАТИКОЙ АПРЕСКИ ============ */
 header {
     background-color: rgba(0, 0, 0, 0.95);
     padding: 15px 0;
@@ -67,7 +57,6 @@ header {
     padding: 0 40px;
 }
 
-/* Лого с тематикой апрески */
 .logo {
     display: flex;
     align-items: center;
@@ -78,36 +67,17 @@ header {
     letter-spacing: 3px;
     font-size: 1.3rem;
     text-transform: uppercase;
+    height: 60px;
 }
 
-.logo-icon {
-    position: relative;
-    margin-right: 15px;
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
 }
 
-.logo-icon i:first-child {
-    font-size: 2.2rem;
-    color: var(--snow-blue);
-    animation: snow-fall 3s infinite;
-}
-
-.logo-icon i:last-child {
-    position: absolute;
-    top: 10px;
-    left: 12px;
-    font-size: 1.4rem;
-    color: var(--ski-orange);
-    animation: board-slide 3s infinite;
-}
-
-@keyframes snow-fall {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(5px); }
-}
-
-@keyframes board-slide {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(3px); }
+.logo-image:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -120,11 +90,12 @@ header {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: color 0.3s;
     position: relative;
+    padding: 8px 12px;
 }
 
 .nav-link::after {
@@ -146,24 +117,22 @@ header {
     width: 100%;
 }
 
-/* ============ ГЛАВНАЯ СТРАНИЦА ============ */
 main {
     margin-top: 70px;
 }
 
-/* Герой секция с слоганом */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-                url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 180px 0 120px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    height: 100vh;
+    min-height: 800px;
 }
 
-/* Графические элементы апрески */
 .hero::before {
     content: '';
     position: absolute;
@@ -245,11 +214,12 @@ main {
     z-index: 1;
     text-transform: uppercase;
     font-family: 'Cormorant Garamond', serif;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
-    color: var(--text-gray);
+    color: var(--text-white);
     max-width: 600px;
     margin: 0 auto 60px;
     line-height: 1.8;
@@ -257,6 +227,12 @@ main {
     position: relative;
     z-index: 1;
     font-family: 'Montserrat', sans-serif;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 25px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-buttons {
@@ -279,31 +255,37 @@ main {
     font-size: 0.9rem;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .btn-primary {
     background-color: transparent;
     border-color: var(--accent-gold);
     color: var(--accent-gold);
+    background-color: rgba(212, 175, 55, 0.1);
 }
 
 .btn-primary:hover {
     background-color: var(--accent-gold);
     color: var(--bg-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
 .btn-secondary {
     background-color: transparent;
     border-color: var(--text-white);
     color: var(--text-white);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-secondary:hover {
     background-color: var(--text-white);
     color: var(--bg-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* ============ БЛОК УТП ============ */
 .features {
     padding: 100px 0;
     background-color: var(--bg-dark);
@@ -345,7 +327,7 @@ main {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -389,7 +371,6 @@ main {
     font-weight: 300;
 }
 
-/* ============ СТРАНИЦА МЕНЮ (КАК НА КАРТИНКЕ) ============ */
 .menu-hero {
     background-color: var(--bg-dark);
     padding: 120px 0 60px;
@@ -429,7 +410,6 @@ main {
     font-weight: 300;
 }
 
-/* Раздел меню */
 .menu-section {
     padding: 80px 0;
     position: relative;
@@ -453,7 +433,6 @@ main {
     letter-spacing: 5px;
     margin-bottom: 50px;
     color: var(--text-white);
-    text-align: center;
     font-family: 'Cormorant Garamond', serif;
     position: relative;
 }
@@ -462,14 +441,49 @@ main {
     content: '';
     position: absolute;
     bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
+    left: 0;
+    width: 80px;
     height: 1px;
     background-color: var(--accent-gold);
 }
 
-/* Список блюд как на картинке */
+.category-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 70px;
+    align-items: start;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.category-content {
+    flex: 1;
+}
+
+.category-image {
+    position: relative;
+    top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-photo {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+}
+
+.category-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+}
+
 .menu-items {
     max-width: 800px;
     margin: 0 auto;
@@ -523,7 +537,6 @@ main {
     margin-top: 5px;
 }
 
-/* ============ КРАСИВЫЕ ЦЕНЫ НА РУССКОМ ============ */
 .item-price {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.7rem;
@@ -535,6 +548,32 @@ main {
     padding-left: 20px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.item-weight {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(153, 153, 153, 0.7);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.menu-item:hover .item-price {
+    color: var(--accent-gold-bright);
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.menu-item:hover .item-weight {
+    color: var(--accent-gold-light);
+    opacity: 1;
 }
 
 .item-price::before {
@@ -551,20 +590,21 @@ main {
         transparent 100%);
 }
 
-.menu-item:hover .item-price {
-    color: var(--accent-gold-bright);
-    transform: scale(1.05);
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-}
-
-/* Для больших цен (вино) */
-.menu-section:nth-child(2) .item-price {
+.menu-section:nth-child(2) .item-price,
+.menu-section:nth-child(3) .item-price,
+.menu-section:nth-child(4) .item-price,
+.menu-section:nth-child(5) .item-price,
+.menu-section:nth-child(6) .item-price {
     font-size: 1.9rem;
     color: var(--accent-gold-light);
     font-weight: 600;
 }
 
-.menu-section:nth-child(2) .item-price::before {
+.menu-section:nth-child(2) .item-price::before,
+.menu-section:nth-child(3) .item-price::before,
+.menu-section:nth-child(4) .item-price::before,
+.menu-section:nth-child(5) .item-price::before,
+.menu-section:nth-child(6) .item-price::before {
     height: 40px;
     background: linear-gradient(to bottom, 
         transparent 0%, 
@@ -572,15 +612,6 @@ main {
         transparent 100%);
 }
 
-/* Специальные стили для символа рубля */
-.item-price::after {
-    content: ' ₽';
-    font-weight: 400;
-    margin-left: 2px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Блок с контактами в подвале */
 #contacts {
     background-color: var(--bg-header);
     padding: 80px 0 40px;
@@ -613,7 +644,7 @@ main {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
@@ -668,263 +699,3 @@ main {
     font-weight: 300;
 }
 
-/* Стили для бургерного меню (мобильная навигация) */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--text-white);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 5px;
-    z-index: 1001;
-}
-
-/* ============ АДАПТИВНОСТЬ ============ */
-@media (max-width: 1024px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-    
-    .main-title {
-        font-size: 3rem;
-        letter-spacing: 8px;
-    }
-    
-    .item-price {
-        font-size: 1.5rem;
-        min-width: 120px;
-    }
-    
-    .menu-section:nth-child(2) .item-price {
-        font-size: 1.7rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0 20px;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.95);
-        flex-direction: column;
-        gap: 0;
-        padding: 20px;
-        display: none;
-        border-top: 1px solid var(--border-color);
-        border-bottom: 1px solid var(--border-color);
-        backdrop-filter: blur(10px);
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .nav-link {
-        padding: 15px 20px;
-        border-bottom: 1px solid var(--border-color);
-        width: 100%;
-    }
-    
-    .nav-link:last-child {
-        border-bottom: none;
-    }
-    
-    .hero-title {
-        font-size: 2.8rem;
-        letter-spacing: 4px;
-        padding: 0 10px;
-    }
-    
-    .main-title {
-        font-size: 2.5rem;
-        letter-spacing: 5px;
-    }
-    
-    .section-title, .contact-section-title {
-        font-size: 2rem;
-    }
-    
-    .menu-category-title {
-        font-size: 1.8rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    .btn {
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .menu-item {
-        flex-direction: column;
-    }
-    
-    .item-price {
-        text-align: left;
-        margin-top: 15px;
-        min-width: auto;
-        padding-left: 0;
-        font-size: 1.6rem;
-        padding-top: 10px;
-        border-top: 1px dashed var(--border-color);
-    }
-    
-    .item-price::before {
-        display: none;
-    }
-    
-    .menu-section:nth-child(2) .item-price {
-        font-size: 1.8rem;
-    }
-    
-    .item-content {
-        padding-right: 0;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .menu-description {
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 140px 0 80px;
-    }
-    
-    .hero-title {
-        font-size: 2.2rem;
-        letter-spacing: 3px;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-        padding: 0 20px;
-    }
-    
-    .main-title {
-        font-size: 2rem;
-        letter-spacing: 3px;
-    }
-    
-    .menu-category-title {
-        font-size: 1.6rem;
-        letter-spacing: 3px;
-    }
-    
-    .item-name {
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-    }
-    
-    .item-description {
-        font-size: 0.95rem;
-    }
-    
-    .item-price {
-        font-size: 1.4rem;
-    }
-    
-    .menu-section:nth-child(2) .item-price {
-        font-size: 1.6rem;
-    }
-    
-    .container {
-        padding: 0 15px;
-    }
-    
-    .features {
-        padding: 60px 0;
-    }
-    
-    .menu-section {
-        padding: 50px 0;
-    }
-    
-    .feature-card {
-        padding: 30px 20px;
-    }
-    
-    .feature-card h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Анимация появления элементов меню */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.menu-item {
-    animation: fadeInUp 0.5s ease forwards;
-    opacity: 0;
-}
-
-.menu-item:nth-child(1) { animation-delay: 0.1s; }
-.menu-item:nth-child(2) { animation-delay: 0.2s; }
-.menu-item:nth-child(3) { animation-delay: 0.3s; }
-.menu-item:nth-child(4) { animation-delay: 0.4s; }
-.menu-item:nth-child(5) { animation-delay: 0.5s; }
-
-/* Декоративные элементы для русских цен */
-.price-decoration {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.price-decoration::after {
-    content: '₽';
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.8em;
-    color: var(--accent-gold);
-    position: relative;
-    margin-left: 2px;
-}
-
-/* Специальный класс для высоких цен */
-.price-premium {
-    color: var(--accent-gold-bright) !important;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
-    font-weight: 700 !important;
-}
-
-/* Градиентный текст для особых позиций */
-.special-item .item-name {
-    background: linear-gradient(45deg, var(--accent-gold), var(--accent-gold-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}

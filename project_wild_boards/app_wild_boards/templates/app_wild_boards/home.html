@@ -5,7 +5,7 @@
 
 {% block content %}
     <!-- Герой секция с слоганом -->
-    <section class="hero">
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('{% static 'images/20260110_150326.jpg' %}'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
         <div class="hero-decoration">
             <div class="decoration-item ski"><i class="fas fa-skiing"></i></div>
             <div class="decoration-item snowboard"><i class="fas fa-snowboarding"></i></div>
@@ -14,8 +14,8 @@
         </div>
         
         <div class="container">
-            <h1 class="hero-title">{{ slogan }}</h1>
-            <p class="hero-subtitle">Наслаждайтесь лучшими бургерами в горах после активного дня на склоне</p>
+            <h1 class="hero-title">Дикая бургерная на высоте 1460м</h1>
+            <p class="hero-subtitle">Наслаждайтесь лучшими бургерами после активного дня на склоне</p>
             <div class="hero-buttons">
                 <a href="{% url 'menu' %}" class="btn btn-primary">Посмотреть меню</a>
                 <a href="#contacts" class="btn btn-secondary">Контакты</a>
@@ -34,7 +34,7 @@
                         <i class="fas fa-fire"></i>
                     </div>
                     <h3>Сочное мясо</h3>
-                    <p>с видом на горы</p>
+                    <p>Свежие ингредиенты</p>
                 </div>
 
                 <div class="feature-card">
@@ -51,72 +51,6 @@
                     </div>
                     <h3>Апрески</h3>
                     <p>в атмосфере уюта</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Блок Еда -->
-    <section class="menu-section">
-        <div class="container">
-            <h2 class="menu-category-title">Еда</h2>
-            
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">ДИКИЙ БУРГЕР</h3>
-                        <p class="item-description">Булочка бриошь, котлета из мраморной говядины, сыр чеддер, бекон, салат айсберг, помидор, соус дикий</p>
-                    </div>
-                    <div class="item-price">490 ₽</div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">СТЕЙК РИБАЙ</h3>
-                        <p class="item-description">Стейк рибай 300г с овощами гриль и грибным соусом</p>
-                    </div>
-                    <div class="item-price">890 ₽</div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">СЫРНЫЕ ПАЛОЧКИ</h3>
-                        <p class="item-description">Хрустящие палочки из сыра моцарелла с соусом маринара</p>
-                    </div>
-                    <div class="item-price">320 ₽</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Блок Напитки -->
-    <section class="menu-section">
-        <div class="container">
-            <h2 class="menu-category-title">Напитки</h2>
-            
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">ГОРНЫЙ ГЛИНТВЕЙН</h3>
-                        <p class="item-description">Красное вино с апельсином, корицей, гвоздикой и мёдом</p>
-                    </div>
-                    <div class="item-price">320 ₽</div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">ГОРЯЧИЙ ШОКОЛАД</h3>
-                        <p class="item-description">Настоящий горячий шоколад с зефиром и взбитыми сливками</p>
-                    </div>
-                    <div class="item-price">280 ₽</div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-content">
-                        <h3 class="item-name">МЕДОВУХА ТРАДИЦИОННАЯ</h3>
-                        <p class="item-description">Домашняя медовуха с горными травами</p>
-                    </div>
-                    <div class="item-price">350 ₽</div>
                 </div>
             </div>
         </div>
@@ -148,6 +82,10 @@
                         allowfullscreen="true">
                     </iframe>
                 </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Дикие Доски. Дикая бургерная на высоте 1460м</p>
             </div>
         </div>
     </section>
